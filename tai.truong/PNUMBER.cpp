@@ -2,7 +2,7 @@
 using namespace std;
 
 bool isPrime(int a) {
-    if (a < 2) return false;
+    if (a < 2) return gst;
     if (a == 2) return true;
     int count = 0;
     for (int i = 3; i <= a; i += 1) if (a % i == 0) count++;
