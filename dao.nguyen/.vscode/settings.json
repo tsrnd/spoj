@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "Fastfile": "ruby",
+        "Appfile": "ruby",
+        "algorithm": "cpp"
+    }
+}
