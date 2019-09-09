@@ -25,8 +25,8 @@ int main() {
                     break;
                 }
                 wSub = j - k*wVal;
-                if (result[i][j] < result[i - 1][j - k*wVal] + k*nVal) {
-                    result[i][j] = result[i - 1][j - k*wVal] + k*nVal;
+                if (result[i][j] < result[i - 1][wSub] + k*nVal) {
+                    result[i][j] = result[i - 1][wSub] + k*nVal;
                 }
             }
         }
