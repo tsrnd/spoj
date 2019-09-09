@@ -5,26 +5,28 @@ using namespace std;
 #define MAX 10000
 
 int main() {
-    int n;
+    ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+
+    int n, i, j;
     cin >> n;
 
-    int s[N];
-    for (int i = 0; i < n; i++) {
+    int s[N] = {};
+    for (i = 0; i < n; i++) {
         cin >> s[i];
     }
 
-    int len[N], k = 0;
-    for (int i = 0; i < n; i++) {
-        len[i] = 1;
-        for (int j = 0; j < i; j++) {
-            if (s[j] < s[i] && len[j] + 1 > len[i]) {
-                len[i] = len[j] + 1;
+    int k[N], mk = 0;
+    for (i = 0; i < n; i++) {
+        k[i] = 1;
+        for (j = 0; j < i; j++) {
+            if (s[j] < s[i] && k[j] + 1 > k[i]) {
+                k[i] = k[j] + 1;
             }
         }
-        if (len[i] > k) k = len[i];
+        if (k[i] > mk) mk = k[i];
     }
 
-    cout << k;
+    cout << mk;
 
     return 0;
 }
