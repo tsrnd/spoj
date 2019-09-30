@@ -1,25 +1,27 @@
 #include <iostream>
-#include <string.h>
-using namespace std;
+#include <string>
 
-#define ul unsigned long
+using std::cin;
+using std::cout;
+using std::ios;
+using std::max;
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);
 
-    ul n, m, i, j;
+    int n, m, i, j;
 
     cin >> n >> m;
 
-    ul* w = new ul[n];
-    ul* v = new ul[n];
+    int* w = new int[n];
+    int* v = new int[n];
     for (i = 0; i < n; i++) {
         cin >> w[i] >> v[i];
     }
 
-    ul** f = new ul*[n];
+    int** f = new int*[n];
     for (i = 0; i < n; i++) {
-        f[i] = new ul[m+1];
+        f[i] = new int[m+1];
         f[i][0] = 0;
     }
 
@@ -43,13 +45,6 @@ int main() {
     }
 
     cout << f[n-1][m];
-
-    delete[] w;
-    delete[] v;
-    for (i = 0; i < n; i++) {
-        delete[] f[i];
-    }
-    delete[] f;
 
     return 0;
 }

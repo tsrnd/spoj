@@ -1,5 +1,8 @@
 #include <iostream>
-using namespace std;
+
+using std::cin;
+using std::cout;
+using std::ios;
 
 int main() {
     ios::sync_with_stdio(false); cin.tie(0); cout.tie(0);

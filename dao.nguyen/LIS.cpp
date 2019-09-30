@@ -1,33 +1,37 @@
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h>
+#include <stdio.h>
+
+using std::cin;
+using std::cout;
+using std::ios;
 
 #define N 30000
 #define MAX 10000
-#define NOT_FOUND INT_MAX
+#define NOT_FOUND UINT_MAX
 
 int n;
 
 int *int_1d(int n) {
     int* f = new int[n];
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         f[i] = 0;
     }
     return f;
 }
 
-long *long_1d(int n) {
-    long* f = new long[n];
-    for(int i = 0; i < n; i++) {
+uint *uint_1d(int n) {
+    uint* f = new uint[n];
+    for (int i = 0; i < n; i++) {
         f[i] = 0;
     }
     return f;
 }
 
-int find(long b[], int l, int r, long x) {
+int find(uint b[], int l, int r, uint x) {
     if (l > r) return NOT_FOUND;
 
     int m = (l+r)/2;
-    long val = b[m];
+    uint val = b[m];
     if (val > x) return m;
 
     if (val > x) {
@@ -46,14 +50,14 @@ int main() {
 
     cin >> n;
 
-    long* s = long_1d(n);
+    uint* s = uint_1d(n);
     for (int i = 0; i < n; i++) {
         cin >> s[i];
     }
 
     int* k = int_1d(n);
     k[0] = 1; int mk = 1;
-    long* b = long_1d(N+2);
+    uint* b = uint_1d(N+2);
     b[0] = 0; b[1] = s[0]; b[N+1] = LONG_MAX;
 
     for (int i = 1; i < n; i++) {

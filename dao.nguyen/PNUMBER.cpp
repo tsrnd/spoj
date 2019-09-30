@@ -1,13 +1,16 @@
-#include <iostream>
 #include <math.h>
-using namespace std;
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::ios;
 
 int ktnt(int n) {
     if (n < 2) return 0;
     if (n == 2) return 1;
     if (n % 2 == 0) return 0;
 
-    int t = (int)sqrt(n);
+    int t = static_cast<int>(sqrt(n));
     for (int i = 3; i <= t; i += 2) {
         if (n % i == 0) return 0;
     }

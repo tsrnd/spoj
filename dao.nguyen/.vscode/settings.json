@@ -1,0 +1,7 @@
+{
+    "code-runner.executorMap": {
+        "c": "cd $dir && mkdir -p build && gcc-5 $fileName -o build/$fileNameWithoutExt && $dir/build/$fileNameWithoutExt",
+        "cpp": "cd $dir && mkdir -p build && g++-5 $fileName -o build/$fileNameWithoutExt && $dir/build/$fileNameWithoutExt"
+    },
+    "cpplint.filters": ["-legal/copyright", "-whitespace/newline"]
+}

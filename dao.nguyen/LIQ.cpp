@@ -1,5 +1,8 @@
 #include <iostream>
-using namespace std;
+
+using std::cin;
+using std::cout;
+using std::ios;
 
 #define N 1000
 #define MAX 10000
